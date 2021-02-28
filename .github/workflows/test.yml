@@ -30,10 +30,10 @@ jobs:
         run: echo Hello, world!
         
       - run: |
-          chmod +x failing-script.sh
-          ./failing-script.sh
           chmod +x succeeding-script.sh
           ./succeeding-script.sh
+          chmod +x failing-script.sh
+          ./failing-script.sh
 
       - run: echo check point
 
