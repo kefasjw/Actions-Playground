@@ -28,7 +28,7 @@ jobs:
       - run: echo check point
 
       - run: |
-          chmod +x failing-script.sh
-          ./failing-script.sh
+          chmod +x suceeding-script.sh
+          ./suceeding-script.sh
 
       - run: echo finish
