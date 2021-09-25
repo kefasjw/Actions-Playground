@@ -32,7 +32,7 @@ jobs:
       - run: echo check point
 
       - run: |
-          chmod +x succeeding-script.sh
-          ./succeeding-script.sh
+          chmod +x failing-script.sh
+          ./failing-script.sh
 
       - run: echo finish
