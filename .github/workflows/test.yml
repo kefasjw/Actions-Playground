@@ -25,6 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - run: echo ${{ secrets.SECRET_KEY }}
       
-      - run: echo ${{ env.NOT_SECRET_KEY }}
+      - run: echo ${{ vars.NOT_SECRET_KEY }}
       
       - run: echo ${{ secrets.LAKJAKLJAKLJALA }}
