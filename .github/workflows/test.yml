@@ -41,11 +41,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - run: echo "from step 2" > tes2
+      - run: echo "from step 2" > tes
 
-      - run: cat tes2
+      - run: cat tes
 
       - uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
 
       - run: cat tes
 
