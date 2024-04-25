@@ -18,16 +18,14 @@ jobs:
   # This workflow contains a single job called "build"
   step1:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
-      - run: echo ${{ secrets.GOOGLE_SERVICES_JSON }}
       
-      - run: echo ${{ secrets.GOOGLE_SERVICES_JSON }} | base64 -di > google-services.json
+      - run: echo "YXNkYXNkCg==" | base64 --decode --output zxc.txt
 
-      - run: cat google-services.json
+      - run: cat zxc.txt
           
