@@ -27,7 +27,7 @@ jobs:
 
       - run: echo ${{ vars.GOOGLE_SERVICES_JSON }}
       
-      - run: echo ${{ vars.GOOGLE_SERVICES_JSON }} | base64 > google-services.json
+      - run: echo ${{ vars.GOOGLE_SERVICES_JSON }} | base64 -di > google-services.json
 
       - run: cat google-services.json
           
