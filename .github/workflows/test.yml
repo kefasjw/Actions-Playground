@@ -25,7 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       
-      - run: echo "YXNkYXNkCg==" | base64 --decode --output zxc.txt
+      - run: echo $GITHUB_ENV
 
-      - run: cat zxc.txt
+      - run: cat $GITHUB_ENV
+      
           
