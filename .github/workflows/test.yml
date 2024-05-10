@@ -51,6 +51,10 @@ jobs:
       - run: echo "$(VERSION="${{ inputs.version }}"; echo ${VERSION%-xxx})"
 
       - run: echo $CLEAN_VERSION
+      
+      - run: |
+          [ -z "${{ inputs.version }}" ] && npx standard-version --commit-all || npx standard-version --commit-all --release-as ${{ inputs.version }}
+          git push --follow-tags origin ${{ env.GIT_REF }}
         
       
           
