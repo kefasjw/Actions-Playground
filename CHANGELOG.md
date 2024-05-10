@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
+* **readme:** g ([3c09529](https://github.com/kefasjw/Actions-Playground/commit/3c09529b3ad5f709de7046c4b78510058ae046ec))
+
+## 1.1.0 (2024-05-10)
+
+
+### Features
+
 * **readme:** f ([aa013c9](https://github.com/kefasjw/Actions-Playground/commit/aa013c955c42c818d5a27d5a3d18579864b9b04e))
 
 ## 1.1.0 (2024-05-10)
