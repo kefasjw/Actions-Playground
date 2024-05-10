@@ -8,6 +8,8 @@ on:
     inputs:
       flavor:
         required: true
+      version:
+        required: true
       
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -44,6 +46,8 @@ jobs:
         run: echo asdasd
 
       - run: echo -$FLAVOR asdasd 
+
+      - run: echo "$(VERSION="${{ github.event.inputs.version }}"; echo ${VERSION%-xxx})"
         
       
           
