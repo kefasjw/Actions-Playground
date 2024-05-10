@@ -21,6 +21,7 @@ jobs:
     environment: playground_${{ github.event.inputs.flavor }}
     env: 
       FLAVOR: ${{ github.event.inputs.flavor }}
+      CLEAN_VERSION: $(VERSION="${{ github.event.inputs.version }}"; echo ${VERSION%-xxx})
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -48,6 +49,8 @@ jobs:
       - run: echo -$FLAVOR asdasd 
 
       - run: echo "$(VERSION="${{ github.event.inputs.version }}"; echo ${VERSION%-xxx})"
+
+      - run: echo $CLEAN_VERSION
         
       
           
