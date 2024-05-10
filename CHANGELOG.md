@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
+* **readme:** f ([aa013c9](https://github.com/kefasjw/Actions-Playground/commit/aa013c955c42c818d5a27d5a3d18579864b9b04e))
+
+## 1.1.0 (2024-05-10)
+
+
+### Features
+
 * **qweqwe:** adasasd ([d7aab40](https://github.com/kefasjw/Actions-Playground/commit/d7aab40af055b6562e704c803ca2061f00d2c094))
 
 ### 1.0.1 (2024-05-10)
