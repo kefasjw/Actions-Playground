@@ -56,6 +56,6 @@ jobs:
           [ -z "${{ inputs.version }}" ] && npx standard-version --commit-all || npx standard-version --commit-all --release-as ${{ inputs.version }}
           git push --follow-tags origin ${{ env.GIT_REF }}
 
-      - run: npx datadog-ci flutter-symbols upload
+      - run: npx @datadog/datadog-ci flutter-symbols upload
       
           
