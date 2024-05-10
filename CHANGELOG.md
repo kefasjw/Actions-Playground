@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.3-xxx (2024-05-10)
+
+
+### Bug Fixes
+
+* **ci:** install datadog ci ([c0962b6](https://github.com/kefasjw/Actions-Playground/commit/c0962b672c376ce05cfe989c37bd0bbb5b825a3e))
+
 ### 1.0.2-xxx (2024-05-10)
 
 ### 1.0.1-xxx (2024-05-10)
