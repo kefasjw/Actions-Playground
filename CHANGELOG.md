@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.1 (2024-05-10)
+
+
+### Bug Fixes
+
+* **zxzxc:** zxczxc ([2b4b205](https://github.com/kefasjw/Actions-Playground/commit/2b4b205c707925e0c5b5ee54b082ce79dc5808e8))
+
 ### 1.0.5-xxx (2024-05-10)
 
 ### 1.0.3-xxx (2024-05-10)
