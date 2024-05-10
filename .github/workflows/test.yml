@@ -43,12 +43,12 @@ jobs:
       - name: Build android $FLAVOR
         run: echo asdasd
 
-      - name: Build android ${{ github.event.inputs.flavor }}
+      - name: Build android ${{ inputs.flavor }}
         run: echo asdasd
 
       - run: echo -$FLAVOR asdasd 
 
-      - run: echo "$(VERSION="${{ github.event.inputs.version }}"; echo ${VERSION%-xxx})"
+      - run: echo "$(VERSION="${{ inputs.version }}"; echo ${VERSION%-xxx})"
 
       - run: echo $CLEAN_VERSION
         
