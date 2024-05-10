@@ -39,6 +39,11 @@ jobs:
 
       - name: Build android $FLAVOR
         run: echo asdasd
+
+      - name: Build android ${{ github.event.inputs.flavor }}
+        run: echo asdasd
+
+      - run: echo -$FLAVOR asdasd 
         
       
           
