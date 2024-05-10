@@ -6,8 +6,9 @@ name: Get Tag
 on:
 
   # Allows you to run this workflow manually from the Actions tab
+  push:
+    tags: "**"
   workflow_dispatch:
-  tag:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
