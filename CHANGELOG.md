@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.1.0 (2024-05-10)
+
+
+### Features
+
+* **readme:** i ([4191b7a](https://github.com/kefasjw/Actions-Playground/commit/4191b7a85c73649c1e0df7ff0096fbeca21236c1))
+
 ### 1.0.1 (2024-05-10)
 
 
