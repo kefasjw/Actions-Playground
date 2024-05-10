@@ -9,6 +9,10 @@ on:
   push:
     tags: "**"
   workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag"
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,3 +28,5 @@ jobs:
         id: getTag
 
       - run: echo "${{ steps.getTag.outputs.tag }}"
+
+      - run: echo "${${{ github.event.inputs.tag }}%-xxx}"
