@@ -4,6 +4,7 @@ name: Get Tag
 
 # Controls when the workflow will run
 on:
+  push:
   workflow_dispatch:
     inputs:
       tag:
@@ -22,6 +23,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
       - run: echo "${{ env.GITHUB_ENV }}"
+
+      - run: echo "$GITHUB_ENV"
     
       - name: Get version from tag
         run: echo "VERSION=$(TAG="${{ inputs.tag }}"; echo ${TAG#v} | cut -d'-' -f1,2)" >> $GITHUB_ENV
