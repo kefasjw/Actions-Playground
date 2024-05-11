@@ -25,3 +25,5 @@ jobs:
         run: echo "VERSION=$(TAG="${{ inputs.tag }}"; echo ${TAG#v} | cut -d'-' -f1,2)" >> GITHUB_ENV
 
       - run: echo "${{ env.VERSION }}"
+
+      - run: echo "$VERSION"
