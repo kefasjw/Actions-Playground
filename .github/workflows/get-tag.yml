@@ -20,9 +20,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+      - run: echo "${{ env.GITHUB_ENV }}"
     
       - name: Get version from tag
-        run: echo "VERSION=$(TAG="${{ inputs.tag }}"; echo ${TAG#v} | cut -d'-' -f1,2)" >> ${{ env.GITHUB_ENV }}
+        run: echo "VERSION=$(TAG="${{ inputs.tag }}"; echo ${TAG#v} | cut -d'-' -f1,2)" >> $GITHUB_ENV
 
       - run: echo "${{ env.VERSION }}"
 
