@@ -4,10 +4,6 @@ name: Get Tag
 
 # Controls when the workflow will run
 on:
-
-  # Allows you to run this workflow manually from the Actions tab
-  push:
-    tags: "**"
   workflow_dispatch:
     inputs:
       tag:
@@ -24,9 +20,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: olegtarasov/get-tag@v2.1.2
-        id: getTag
+    
+      - name: Get version from tag
+        run: echo "VERSION=$(TAG="${{ inputs.tag }}"; echo ${TAG#v} | cut -d'-' -f1,2)" >> GITHUB_ENV
 
-      - run: echo "${{ steps.getTag.outputs.tag }}"
-
-      - run: echo $(version="${{ github.event.inputs.tag }}"; echo ${version%-xxx})
+      - run: echo "${{ env.VERSION }}"
