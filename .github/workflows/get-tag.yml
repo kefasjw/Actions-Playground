@@ -8,17 +8,28 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Tag"
+        description: "Tag to be used for this promotion"
         required: true
-      asd:
-        description: "Asd"
+      environment:
+        description: "Environment"
         required: true
-        type: environment
+        type: choice
+        options:
+          - sit
+          - uat
+      platform:
+        description: "Platform"
+        required: true
+        type: choice
+        options:
+          - android
+          - ios
+          - all
       debug_mode:
         description: "Debug Mode (For Automation)"
         required: true
         type: boolean
-        default: true
+        default: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
