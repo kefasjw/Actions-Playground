@@ -14,6 +14,10 @@ on:
         description: "Asd"
         required: true
         type: environment
+      debug_mode:
+        description: "Debug Mode (For Automation)"
+        required: true
+        default: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
