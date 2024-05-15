@@ -57,6 +57,9 @@ jobs:
           echo "${{
             env.ASD
           }} lol"
+          echo "asd"
+          echo "qwe\
+          asd"
           
 
       - run: |
