@@ -14,6 +14,7 @@ on:
         description: "Environment"
         required: true
         type: choice
+        default: sit
         options:
           - sit
           - uat
@@ -21,15 +22,20 @@ on:
         description: "Platform"
         required: true
         type: choice
+        default: android
         options:
           - android
           - ios
           - all
-      debug_mode:
-        description: "Debug Mode (For Automation)"
+      build_type:
+        description: "Build Type"
         required: true
-        type: boolean
-        default: false
+        type: choice
+        default: release
+        options:
+          - release
+          - debug
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -44,27 +50,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
-      - run: echo "${{ env.GITHUB_ENV }}"
-
-      - run: echo "$GITHUB_ENV"
-    
-      - name: Get version from tag
-        run: echo "KEF=AS" >> $GITHUB_ENV
-
-      - run: echo "${{ env.KEF }}"
-
-      - run: echo "$KEF"
-
-      - run: echo "${{ env.ASD }}"
-
-      - run: echo "$ASD"
-    
-      - name: Get version from tag
-        run: echo "VERSION=$(TAG="${{ inputs.tag }}"; echo ${TAG#v} | cut -d'-' -f1,2)" >> $GITHUB_ENV
-
-      - run: echo "${{ env.VERSION }}"
-
-      - run: echo "${{ env.VERSIONX }}"
-
-      - run: echo "$VERSION"
+      - run: echo "${{ inputs.build_type == 'debug' || 'gubed' && 'not debug' }}"
 
