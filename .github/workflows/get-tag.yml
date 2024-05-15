@@ -65,5 +65,9 @@ jobs:
           
 
       - run: |
-          echo "${{ inputs.build_type == 'debug' || 'gubed' && 'not release' }}"
+          echo "${{ 
+            inputs.build_type == 'debug' 
+              || 'gubed' 
+              && 'not release' 
+          }}"
 
