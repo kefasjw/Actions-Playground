@@ -51,5 +51,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
       - run: |
-          echo "${{ inputs.build_type == 'debug' ? 'gubed' : 'not release' }}"
+          echo "${{ inputs.build_type == 'debug' || 'gubed' && 'not release' }}"
 
