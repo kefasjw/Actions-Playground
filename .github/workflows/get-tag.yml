@@ -56,7 +56,7 @@ jobs:
         run: |
           echo "${{
             env.ASD
-          }}"
+          }} lol"
           
 
       - run: |
