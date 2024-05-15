@@ -55,7 +55,9 @@ jobs:
       - name: from env ${{ env.ASD }}
         run: |
           echo "${{
-            env.ASD
+          
+          env.ASD
+          
           }} lol"
           echo "asd"
           echo "qwe\
