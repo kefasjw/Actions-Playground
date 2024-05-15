@@ -53,7 +53,11 @@ jobs:
       - run: echo "ASD=zxc" >> $GITHUB_ENV
 
       - name: from env ${{ env.ASD }}
-        run: echo "from env ${{ env.ASD }}"
+        run: |
+          echo "${{
+            env.ASD
+          }}"
+          
 
       - run: |
           echo "${{ inputs.build_type == 'debug' || 'gubed' && 'not release' }}"
