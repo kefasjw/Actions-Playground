@@ -57,12 +57,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
-  ds:
+  ecommerce_app:
     dependency: "direct main"
     description:
-      path: "../ds"
-      relative: true
-    source: path
+      path: "."
+      ref: pubtest
+      resolved-ref: af7141255ca07cdba481843ca2bd1efea99c69d8
+      url: "https://github.com/kefasjw/lcov_pr_report_demo.git"
+    source: git
     version: "1.0.0+1"
   fake_async:
     dependency: transitive
