@@ -11,7 +11,7 @@ jobs:
   # This workflow contains a single job called "build"
   step1:
     # The type of runner that the job will run on
-    runs-on: macos-latest
+    runs-on: macos-14-arm64
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -21,7 +21,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           cache: true
-          flutter-version: '3.13.9'
+          flutter-version: '3.22.1'
       
       - uses: bluefireteam/melos-action@v2
 
