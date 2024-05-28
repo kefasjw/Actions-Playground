@@ -38,7 +38,7 @@ dependencies:
   bfi_design_system_1:
     git:
       url: https://github.com/kefasjw/lcov_pr_report_demo.git
-      ref: 'e4c3740'
+      ref: '7e9a619'
 
 dev_dependencies:
   flutter_test:
