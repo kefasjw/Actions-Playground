@@ -30,6 +30,8 @@ jobs:
 
       - run: cat pubspec.lock
 
+      - run: cat pubtest/pubspec.lock
+
 
       
       
