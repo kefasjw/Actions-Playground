@@ -4,12 +4,7 @@ name: CI
 
 # Controls when the action will run. 
 on:
-  workflow_dispatch:
-    inputs:
-      flavor:
-        required: true
-      version:
-        required: true
+  push:
       
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -17,43 +12,25 @@ jobs:
   # This workflow contains a single job called "build"
   step1:
     # The type of runner that the job will run on
-    runs-on: macos-14
-    environment: playground_${{ github.event.inputs.flavor }}
-    env: 
-      FLAVOR: ${{ github.event.inputs.flavor }}
-      CLEAN_VERSION: $(VERSION="${{ github.event.inputs.version }}"; echo ${VERSION%-xxx})
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       
-      - run: echo $GITHUB_ENV
-
-      - run: echo "ASD=asdasd" >> $GITHUB_ENV
-
-      - run: cat $GITHUB_ENV
-
-      - run: echo $ASD
-
-      - run: echo ${{ vars.MY_VAR }}
-
-      - run: echo $FLAVOR
-
-      - name: Build android $FLAVOR
-        run: echo asdasd
-
-      - name: Build android ${{ inputs.flavor }}
-        run: echo asdasd
-
-      - run: echo -$FLAVOR asdasd 
-
-      - run: echo "$(VERSION="${{ inputs.version }}"; echo ${VERSION%-xxx})"
-
-      - run: echo $CLEAN_VERSION
+      - uses: subosito/flutter-action@v2
+        with:
+          cache: true
+          flutter-version: '3.13.9'
       
-      - run: |
-          npx standard-version --commit-all
-          git push --follow-tags origin ${{ env.GIT_REF }}
+      - uses: bluefireteam/melos-action@v2
+
+      - run: git diff --ignore-space-at-eol --text
+
+      - run: cat pubspec.lock
+
+
+      
       
           
