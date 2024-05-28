@@ -61,8 +61,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "9552220"
-      resolved-ref: "9552220f4d5dad2844ea10ba0f9c46b86cf8e69d"
+      ref: eca8b5b
+      resolved-ref: eca8b5b3fb2eff8bb4676eb4029ffb535558ebc7
       url: "https://github.com/kefasjw/lcov_pr_report_demo.git"
     source: git
     version: "0.0.0"
@@ -104,10 +104,10 @@ packages:
     dependency: transitive
     description:
       name: google_fonts
-      sha256: f0b8d115a13ecf827013ec9fc883390ccc0e87a96ed5347a3114cac177ef18e8
+      sha256: e20ff62b158b96f392bfc8afe29dee1503c94fbea2cbe8186fd59b756b8ae982
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.0"
+    version: "5.1.0"
   http:
     dependency: transitive
     description:
