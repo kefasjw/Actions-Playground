@@ -17,17 +17,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      
+
       - uses: subosito/flutter-action@v2
         id: flutter-action
         with:
           cache: true
           flutter-version: '3.13.9'
-
-#      - run: |
-#          cd pubtest
-#          flutter pub upgrade bfi_design_system_1
       
+      #      - run: |
+      #          cd pubtest
+      #          flutter pub upgrade bfi_design_system_1
+
       - uses: bluefireteam/melos-action@v2
 
       - run: git diff --ignore-space-at-eol --text
@@ -36,3 +36,8 @@ jobs:
         with:
           name: pub-cache
           path: ${{ steps.flutter-action.outputs.PUB-CACHE-PATH }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pub-cache
+          path: pubtest/.dart_tool/package_config.json
