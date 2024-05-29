@@ -24,9 +24,9 @@ jobs:
           cache: true
           flutter-version: '3.13.9'
 
-      - run: |
-          cd pubtest
-          flutter pub upgrade bfi_design_system_1
+#      - run: |
+#          cd pubtest
+#          flutter pub upgrade bfi_design_system_1
       
       - uses: bluefireteam/melos-action@v2
 
