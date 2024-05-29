@@ -21,8 +21,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: a621f6c
-      resolved-ref: a621f6cb2658157a8e7757ce7d2513331c82f3be
+      ref: "61824ed"
+      resolved-ref: "61824ed0dddfc25722f0475568d19e5116f4beea"
       url: "https://github.com/kefasjw/lcov_pr_report_demo.git"
     source: git
     version: "0.0.0"
