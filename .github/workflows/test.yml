@@ -23,7 +23,7 @@ jobs:
         with:
           cache: true
           flutter-version: '3.13.9'
-      
+
       #      - run: |
       #          cd pubtest
       #          flutter pub upgrade bfi_design_system_1
@@ -39,5 +39,5 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: pub-cache
+          name: package_config.json
           path: pubtest/.dart_tool/package_config.json
